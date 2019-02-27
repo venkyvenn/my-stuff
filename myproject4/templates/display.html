@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <style>
+      div{
+          text-align: center;
+          margin-right: 400px;
+          margin-left: 400px;
+          margin-top: 100px;
+      }
+  </style>
+ </head>
+
+ <body bgcolor="#faebd7">
+
+<div>
+  <table border="0">
+      <tr >
+             <th>pid</th>
+             <th>pname</th>
+             <th>pcost</th>
+             <th>pmfdt</th>
+             <th>pexpdt</th>
+      </tr>
+
+    {% for rec in records %}
+
+        <tr>
+          <td>{{ rec.pid }}</td>
+          <td>{{ rec.pname }}</td>
+          <td>{{ rec.pcost }}</td>
+          <td>{{ rec.pmfdt }}</td>
+          <td>{{ rec.pexpdt }}</td>
+        </tr>
+
+    {% endfor %}
+</table>
+</div>
+
+ </body>
+</html>

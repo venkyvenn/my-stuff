@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}ecommerce site {% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <center><h1>My Project(venk'yyyy)</h1></center><hr><hr>
+      {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}"><h2>logout</h2></a>
+      {% else %}
+        <h3><a href="{% url 'login' %}">login</a> <a href="{% url 'signup' %}">signup</a></h3>
+      {% endif %}
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
